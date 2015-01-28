@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>User Form</title>
+</head>
+
+<body>
+	Form User :<br/>
+	<form action="#" th:object="${user}" th:action="@{/user/save.html}" method="post"> 
+		<table>
+			<tr>
+				<td>Username</td>
+				<td><input type="text" th:field="*{username}" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" th:field="*{password}" /></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" th:field="*{email}" /></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" value="Save" /></td> 
+			</tr>
+		</table>
+	</form> 
+	<br/>
+	<a href="#" th:href="@{/user/list.html}">List User</a>
+	
+</body>
+</html>

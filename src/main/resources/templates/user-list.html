@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>User List</title>
+</head>
+
+<body>
+	List User
+	<table>
+		<tr>
+			<th>Username</th>
+			<th>Password</th>
+		</tr>
+		<tr th:each=" u : ${users} ">
+			<td th:text="${u.username}">Row 1: Col 1</td>
+			<td th:text="${u.password}">Row 1: Col 1</td>
+		</tr>
+	</table>
+
+</body>
+</html>
